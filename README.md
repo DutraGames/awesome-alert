@@ -6,7 +6,7 @@ to provide beautiful alert box messages made with just HTML, CSS and JS.
 
 Feel free to contribute a pull request or suggestions. Because the community that uses it is the same that contributes!
 
-![bandeja de alerta](https://user-images.githubusercontent.com/69097449/191093847-dd9bacbd-ae54-4825-9014-028753b78792.jpg)
+![bandeja de alerta](https://user-images.githubusercontent.com/69097449/191129044-5c3b6b43-0b2b-4601-826c-bc1b2640de63.jpg)
 
 ## **Installation Instructions**
 
@@ -86,6 +86,20 @@ btnInfo.addEventListener('click', () =>{
         message: 'I inform you that you are more than 2 hours on the computer.',
         img: 'imgs/info.svg',
         buttonOK: 'OK!'
+    })
+})
+```
+
+```js
+const btnQuestion = document.querySelector('.show-Question')
+btnQuestion.addEventListener('click', () =>{
+    awesomeAlert({
+        type: 'question',
+        title: 'Contribute?',
+        message: 'Want to contribute to this library?',
+        img: 'imgs/question.svg',
+        buttonConfirm: 'Yes!',
+        buttonCancel: 'No.'
     })
 })
 ```
