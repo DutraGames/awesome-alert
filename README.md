@@ -11,3 +11,13 @@ Feel free to contribute a pull request or suggestions. Because the community tha
 * Clone this repository in your project's lib folder or download the JS and CSS files.
 
 * Import "style.css" and "awesomeAlert.js" into your code as described below:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script defer src="libs/awesome-alert/awesomeAlert.js"><script>
+        <link rel="stylesheet" href="libs/awesome-alert/style.css">
+</head>
+</html>
+```
