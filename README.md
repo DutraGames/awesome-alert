@@ -6,6 +6,8 @@ to provide beautiful alert box messages made with just HTML, CSS and JS.
 
 Feel free to contribute a pull request or suggestions. Because the community that uses it is the same that contributes!
 
+![bandeja de alerta](https://user-images.githubusercontent.com/69097449/191093847-dd9bacbd-ae54-4825-9014-028753b78792.jpg)
+
 ## **Installation Instructions**
 
 * Clone this repository in your project's lib folder or download the JS and CSS files.
