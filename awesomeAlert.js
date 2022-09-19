@@ -4,7 +4,9 @@ const awesomeAlert = ({
     title = '',
     message = '',
     buttonOK = 'OK!',
-    closeStyle = 'default'
+    closeStyle = 'default',
+    buttonConfirm = 'Confirm!',
+    buttonCancel = 'Cancel.'
 }) => {
 
     const bodyEl = document.querySelector('body')
@@ -13,16 +15,26 @@ const awesomeAlert = ({
     const AlertHeader = document.querySelector('.alert-header')
 
     let templateTitle = `<span class="alert-body-title">${title}</span>`
-    
+
     let templateMessage = `<span class="alert-body-message">${message}</span>`
-    
+
     let templateClose = `<span class='alert-close-${closeStyle}'>X</span>`
 
     let templateImage = `<img src=${img} class="alert-img" alt="">`
 
-    
+
     let templateButtons = `<button class="alert-body-button ${type}-bg">${buttonOK}</button>`
-    
+
+
+    if (type === 'question') {
+        templateButtons = `
+        <div class="buttons-question">
+            <button class="alert-body-button btn-confirm">${buttonConfirm}</button>
+            <button class="alert-body-button btn-cancel">${buttonCancel}</button>
+        </div>
+        `
+    }
+
     let templateHeader = `
     <div class="alert-header ${type}-bg">
         ${templateClose}
@@ -36,8 +48,6 @@ const awesomeAlert = ({
                 ${templateButtons}
             </div>`
 
-
-
     let templateAlert = `
     <div class="alert-wallpaper">
         <div class="alert-frame">
@@ -46,6 +56,7 @@ const awesomeAlert = ({
         </div>
     </div>
     `
+
 
 
     bodyEl.insertAdjacentHTML('beforeend', templateAlert)

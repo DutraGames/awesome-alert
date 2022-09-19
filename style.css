@@ -118,26 +118,57 @@
     color: #fff;
     border-radius: 20px;
     cursor: pointer;
+    transition: all .4s;
 }
 
-.alert-body-button:hover{
+.alert-body-button:hover {
     opacity: .5;
 }
 
-/* BACKGROUNDS COLORS HEADERS */
+/* BUTTONS QUESTION */
 
-.success-bg{
-    background-color: #2dd284;
-}
-
-.error-bg{
+.btn-cancel{
     background-color: #d85261;
 }
 
-.warning-bg{
+.btn-cancel:hover{
+    opacity: .5;
+}
+
+.btn-confirm{
+  background-color: #2dd284;
+}  
+
+.btn-confirm:hover{
+  opacity: .5;
+}  
+
+.buttons-question {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+
+
+/* BACKGROUNDS COLORS HEADERS AND BUTTONS */
+
+.success-bg {
+    background-color: #2dd284;
+}
+
+.error-bg {
+    background-color: #d85261;
+}
+
+.warning-bg {
     background-color: #fada5e;
 }
 
-.info-bg{
+.info-bg {
     background-color: #88cef7;
+}
+
+.question-bg {
+    background-color: #779ecb;
 }
