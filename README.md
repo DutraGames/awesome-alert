@@ -28,18 +28,7 @@ Feel free to contribute a pull request or suggestions. Because the community tha
 
 It's very simple to import this lib into your code, all you need to do is call awesomeAlert() and pass its arguments in object notation.
 
-## **Props Alert**
-
-| Name | type | Default | Description |
-:--------- | :--------- | :--------- | :--------- |
-| ```title```  | ```string``` | ```"Success"``` | Will be the alert title. |
-| ```message``` | ```string``` | ```"Success action"``` | Will be the alert message. |
-| ```buttonOK``` | ```string``` | ```'OK!'``` | Is an optional parameter. |
-| ```img``` | ```string``` | ```""``` | Will be the image that will appear to the user. |
-| ```type``` | ```string``` | ```"success"``` | Will define what type of alert will be shown. |
-| ```closeStyle``` | ```string``` | ```"default"``` | Will be the style of the close alert button. |
-
-## Usage
+## **Usage**
 
 To use the library, simply select a button and call the ```awesomeAlert()``` function. Like the example below:
 
@@ -98,6 +87,17 @@ btn.addEventListener('click', () => {
 ![image](https://user-images.githubusercontent.com/69097449/191557290-58842d0a-00ee-40ad-92a4-948778206d29.png)
 
 This can be very useful to know what your app/website user did when they saw your alert.
+
+## **Props Alert**
+
+| Name | type | Default | Description |
+:--------- | :--------- | :--------- | :--------- |
+| ```title```  | ```string``` | ```"Success"``` | Will be the alert title. |
+| ```message``` | ```string``` | ```"Success action"``` | Will be the alert message. |
+| ```buttonOK``` | ```string``` | ```'OK!'``` | Is an optional parameter. |
+| ```img``` | ```string``` | ```""``` | Will be the image that will appear to the user. |
+| ```type``` | ```string``` | ```"success"``` | Will define what type of alert will be shown. |
+| ```closeStyle``` | ```string``` | ```"default"``` | Will be the style of the close alert button. |
 
 ## **Acknowledgements**
 
