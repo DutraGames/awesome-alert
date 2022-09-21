@@ -110,6 +110,6 @@ Types that this library allows of alerts:
 
 ## **Acknowledgements**
 
-Thanks @gustavosmanc for having a library that inspired me to make this library
+Thanks [@gustavosmanc](https://github.com/gustavosmanc) for having a library that inspired me to make this library
 
 Pull requests, feedbacks and suggestions are welcome!
