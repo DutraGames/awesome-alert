@@ -28,6 +28,8 @@ Feel free to contribute a pull request or suggestions. Because the community tha
 
 It's very simple to import this lib into your code, all you need to do is call awesomeAlert() and pass its arguments in object notation.
 
+## **Props Alert**
+
 | Name | type | Default | Description |
 :--------- | :--------- | :--------- | :--------- |
 | ```title```  | ```string``` | ```"Success"``` | Will be the alert title. |
@@ -96,3 +98,9 @@ btn.addEventListener('click', () => {
 ![image](https://user-images.githubusercontent.com/69097449/191557290-58842d0a-00ee-40ad-92a4-948778206d29.png)
 
 This can be very useful to know what your app/website user did when they saw your alert.
+
+## **Acknowledgements**
+
+Thanks @ for having a library that inspired me to make this library
+
+Pull requests, feedbacks and suggestions are welcome!
