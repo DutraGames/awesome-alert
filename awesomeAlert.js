@@ -1,8 +1,8 @@
 const awesomeAlert = ({
-    type,
+    type = 'success',
     img = '',
-    title = '',
-    message = '',
+    title = 'Success',
+    message = 'Success Action!',
     buttonOK = 'OK!',
     closeStyle = 'default',
     buttonConfirm = 'Confirm!',
