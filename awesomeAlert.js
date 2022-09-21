@@ -76,17 +76,31 @@ const awesomeAlert = ({
 
         // Action that closes the alert on Close.
         AlertClose.addEventListener('click', () => {
-            resolve('close')
+            resolve('Close')
             AlertWallpaper.remove()
         })
+
+        // Actions that will be used from the question alert.
+        if (type === 'question') {
+            const AlertButtonConfirm = document.querySelector('.btn-confirm')
+            const AlertButtonCancel = document.querySelector('.btn-cancel')
+
+            AlertButtonConfirm.addEventListener('click', () => {
+                resolve('Confirm')
+                AlertWallpaper.remove()
+            })
+
+            AlertButtonCancel.addEventListener('click', () => {
+                resolve('Cancel')
+                AlertWallpaper.remove()
+            })
+        }
 
         // Action that gives an OK to the button.
         AlertButtonOK.addEventListener('click', () => {
             resolve('OK')
             AlertWallpaper.remove()
         })
-
-        
 
 
     })
