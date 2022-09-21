@@ -40,8 +40,7 @@ btnSuccess.addEventListener('click', () =>{
         title: 'Success!',
         message: 'Successful action!',
         img: 'imgs/success.svg',
-        buttonOK: 'OK!',
-        closeStyle: 'circle'
+        buttonOK: 'Done!',
     })
 })
 ```
@@ -98,6 +97,16 @@ This can be very useful to know what your app/website user did when they saw you
 | ```img``` | ```string``` | ```""``` | Will be the image that will appear to the user. |
 | ```type``` | ```string``` | ```"success"``` | Will define what type of alert will be shown. |
 | ```closeStyle``` | ```string``` | ```"default"``` | Will be the style of the close alert button. |
+
+## **Alerts Types**
+
+Types that this library allows of alerts:
+
+* `success`
+* `error`
+* `warning`
+* `info`
+* `question`
 
 ## **Acknowledgements**
 
