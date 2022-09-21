@@ -24,10 +24,6 @@ Feel free to contribute a pull request or suggestions. Because the community tha
 </html>
 ```
 
-## **Docs**
-
-It's very simple to import this lib into your code, all you need to do is call awesomeAlert() and pass its arguments in object notation.
-
 ## **Usage**
 
 To use the library, simply select a button and call the ```awesomeAlert()``` function. Like the example below:
@@ -110,6 +106,6 @@ Types that this library allows of alerts:
 
 ## **Acknowledgements**
 
-Thanks [@gustavosmanc](https://github.com/gustavosmanc) for having a library that inspired me to make this library
+Thanks [@gustavosmanc](https://github.com/gustavosmanc) for having a library that inspired me to make this library.
 
 Pull requests, feedbacks and suggestions are welcome!
