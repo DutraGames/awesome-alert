@@ -28,101 +28,18 @@ Feel free to contribute a pull request or suggestions. Because the community tha
 
 It's very simple to import this lib into your code, all you need to do is call awesomeAlert() and pass its arguments in object notation.
 
-```title``` will be the alert title, by default it is "".
+| Name | type | Default | Description |
+:--------- | :--------- | :--------- | :--------- |
+| ```title```  | ```string``` | ```"Success"``` | Will be the alert title. |
+| ```message``` | ```string``` | ```"Success action"``` | Will be the alert message. |
+| ```buttonOK``` | ```string``` | ```'OK!'``` | Is an optional parameter. |
+| ```img``` | ```string``` | ```""``` | Will be the image that will appear to the user. |
+| ```type``` | ```string``` | ```"success"``` | Will define what type of alert will be shown. |
+| ```closeStyle``` | ```string``` | ```"default"``` | Will be the style of the close alert button. |
 
-```message``` will be the alert message, by default it is "".
+## Usage
 
-```buttonOK``` is an optional parameter, by default it is set to "OK".
-
-```img``` will be the image that will appear to the user. By default it is "".
-
-```type``` will define what type of alert will be shown.
-
-```js
-const btnSuccess = document.querySelector('.show-Success')
-btnSuccess.addEventListener('click', () =>{
-    awesomeAlert({
-        type: 'success',
-        title: 'Success!',
-        message: 'Successful action!',
-        img: 'imgs/success.svg',
-        buttonOK: 'OK!'
-    })
-})
-```
-
-```js
-const btnError = document.querySelector('.show-Error')
-btnError.addEventListener('click', () =>{
-    awesomeAlert({
-        type: 'error',
-        title: 'Error!',
-        message: 'Something went wrong!',
-        img: 'imgs/error.svg',
-        buttonOK: 'OK!'
-    })
-})
-```
-
-```js
-const btnWarning = document.querySelector('.show-Warning')
-btnWarning.addEventListener('click', () =>{
-    awesomeAlert({
-        type: 'warning',
-        title: 'Warning!',
-        message: 'Wait, it will be ready soon.',
-        img: 'imgs/warning.svg',
-        buttonOK: 'OK!'
-    })
-})
-```
-
-```js
-const btnInfo = document.querySelector('.show-Info')
-btnInfo.addEventListener('click', () =>{
-    awesomeAlert({
-        type: 'info',
-        title: 'Info!',
-        message: 'I inform you that you are more than 2 hours on the computer.',
-        img: 'imgs/info.svg',
-        buttonOK: 'OK!'
-    })
-})
-```
-
-```js
-const btnQuestion = document.querySelector('.show-Question')
-btnQuestion.addEventListener('click', () =>{
-    awesomeAlert({
-        type: 'question',
-        title: 'Contribute?',
-        message: 'Want to contribute to this library?',
-        img: 'imgs/question.svg',
-        buttonConfirm: 'Yes!',
-        buttonCancel: 'No.'
-    })
-})
-```
-
-```closeStyle``` will be the style of the close alert button. By default it is "default".
-
-![image](https://user-images.githubusercontent.com/69097449/191096143-5b71ef03-5f04-44a5-b5dd-44258a0c8dae.png)
-
-```js
-const btnSuccess = document.querySelector('.show-Success')
-btnSuccess.addEventListener('click', () =>{
-    awesomeAlert({
-        type: 'success',
-        title: 'Success!',
-        message: 'Successful action!',
-        img: 'imgs/success.svg',
-        buttonOK: 'OK!',
-        closeStyle: 'default'
-    })
-})
-```
-
-**OR**
+To use the library, simply select a button and call the ```awesomeAlert()``` function. Like the example below:
 
 ```js
 const btnSuccess = document.querySelector('.show-Success')
@@ -138,7 +55,24 @@ btnSuccess.addEventListener('click', () =>{
 })
 ```
 
-### **Promise**
+If you want to use the ```Question```, just follow the example below:
+
+```js
+const btnQuestion = document.querySelector('.show-Question')
+btnQuestion.addEventListener('click', () =>{
+    awesomeAlert({
+        type: 'question',
+        title: 'Do you like cats?',
+        message: 'Could you answer me?',
+        img: 'imgs/question.svg',
+        buttonConfirm: 'Yes',
+        buttonCancel: 'No',
+        closeStyle: 'circle'
+    })
+})
+```
+
+## **Promise**
 
 The function returns a promise, which returns the user's action.
 
