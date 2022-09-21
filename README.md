@@ -106,6 +106,8 @@ btnQuestion.addEventListener('click', () =>{
 
 ```closeStyle``` will be the style of the close alert button. By default it is "default".
 
+![image](https://user-images.githubusercontent.com/69097449/191096143-5b71ef03-5f04-44a5-b5dd-44258a0c8dae.png)
+
 ```js
 const btnSuccess = document.querySelector('.show-Success')
 btnSuccess.addEventListener('click', () =>{
@@ -136,4 +138,27 @@ btnSuccess.addEventListener('click', () =>{
 })
 ```
 
-![image](https://user-images.githubusercontent.com/69097449/191096143-5b71ef03-5f04-44a5-b5dd-44258a0c8dae.png)
+### **Promise**
+
+The function returns a promise, which returns the user's action.
+
+With this return, you can use the ```then``` method to show something to the user.
+
+```js
+const btn = document.querySelector('#Show')
+
+btn.addEventListener('click', () => {
+    awesomeAlert({
+        type: 'error',
+        title: 'Error',
+        message: 'Error in System!',
+        img: './imgs/error.svg',
+        closeStyle: 'circle'
+    })
+    .then(a => alert(a))
+})
+```
+
+![image](https://user-images.githubusercontent.com/69097449/191557290-58842d0a-00ee-40ad-92a4-948778206d29.png)
+
+This can be very useful to know what your app/website user did when they saw your alert.
