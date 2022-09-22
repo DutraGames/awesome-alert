@@ -112,10 +112,10 @@
 }
 
 .alert-body-button {
-    width: 50%;
+    width: 40%;
     margin-top: 15px;
     font-size: large;
-    padding: 5px;
+    padding: 10px;
     border: none;
     color: #fff;
     border-radius: 20px;
@@ -173,6 +173,9 @@
 
 .question-bg {
     background-color: #779ecb;
+}
+.opinion-bg {
+    background-color: #5c5d57;
 }
 
 .dark-bg {

@@ -35,6 +35,16 @@ const awesomeAlert = ({
                 `
         }
 
+        if (type === 'opinion') {
+            templateButtons = `
+                <div class="buttons-question">
+                    <button class="alert-body-button btn-confirm">${buttonConfirm}</button>
+                    <button class="alert-body-button ${type}-bg">${buttonOK}</button>
+                    <button class="alert-body-button btn-cancel">${buttonCancel}</button>
+                </div>
+                `
+        }
+
         let templateHeader = `
             <div class="alert-header ${type}-bg">
                 ${templateClose}
@@ -84,6 +94,28 @@ const awesomeAlert = ({
         if (type === 'question') {
             const AlertButtonConfirm = document.querySelector('.btn-confirm')
             const AlertButtonCancel = document.querySelector('.btn-cancel')
+
+            AlertButtonConfirm.addEventListener('click', () => {
+                resolve('Confirm')
+                AlertWallpaper.remove()
+            })
+
+            AlertButtonCancel.addEventListener('click', () => {
+                resolve('Cancel')
+                AlertWallpaper.remove()
+            })
+        }
+        
+        // Actions that will be used from the opinion alert.
+        if (type === 'opinion') {
+            const AlertButtonOpinion = document.querySelectorAll('.opinion-bg')
+            const AlertButtonConfirm = document.querySelector('.btn-confirm')
+            const AlertButtonCancel = document.querySelector('.btn-cancel')
+
+            AlertButtonOpinion[1].addEventListener('click', () => {
+                resolve('OK')
+                AlertWallpaper.remove()
+            })
 
             AlertButtonConfirm.addEventListener('click', () => {
                 resolve('Confirm')
