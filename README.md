@@ -103,6 +103,8 @@ Types that this library allows of alerts:
 * `warning`
 * `info`
 * `question`
+* `opinion`
+* `dark`
 
 ## **Acknowledgements**
 
