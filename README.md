@@ -58,7 +58,7 @@ btnQuestion.addEventListener('click', () =>{
 })
 ```
 
-If you want to receive written information from the user:
+If you want to receive written information from the user, use `input`. as below:
 
 ```js
 const btnInput = document.querySelector('.show-Input')
