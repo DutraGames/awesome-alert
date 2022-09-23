@@ -58,6 +58,22 @@ btnQuestion.addEventListener('click', () =>{
 })
 ```
 
+If you want to receive written information from the user:
+
+```js
+const btnInput = document.querySelector('.show-Input')
+btnInput.addEventListener('click', () =>{
+    awesomeAlert({
+        type: 'input',
+        title: 'What is your name?',
+        placeholderInput: 'Gabriel Dutra'
+        img: 'imgs/input.svg',
+        buttonOK: 'Submit',
+        closeStyle:  'circle'  
+    })
+})
+```
+
 ## **Promise**
 
 The function returns a promise, which returns the user's action.
