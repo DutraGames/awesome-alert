@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2020 (64 Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="973px" height="973px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 119.52 119.52"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <font id="FontID0" horiz-adv-x="667" font-variant="normal" class="str1" style="fill-rule:nonzero" font-weight="400">
+	<font-face 
+		font-family="Arial">
+		<font-face-src>
+			<font-face-name name="Arial"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="A" horiz-adv-x="667" d="M-1.50047 0l274.751 716.232 104.206 0 291.587 -716.232 -107.868 0 -82.8567 217.072 -301.594 0 -77.6936 -217.072 -100.531 0zm206.061 294.092l244.08 0 -74.6927 198.558c-22.507,60.3614 -39.5084,110.208 -51.3468,149.551 -9.82985,-46.68 -23.0033,-92.5211 -39.5084,-137.878l-78.5325 -210.231z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Arial";font-variant:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .str1 {stroke-width:9;stroke-miterlimit:22.9256}
+    .str0 {stroke:white;stroke-width:4.35;stroke-miterlimit:22.9256}
+    .str3 {stroke:white;stroke-width:2.18;stroke-miterlimit:22.9256}
+    .str2 {stroke:white;stroke-width:0.11;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+    .fil1 {fill:white}
+    .fnt0 {font-weight:normal;font-size:12.28px;font-family:'Arial'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Camada_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <circle class="fil0 str0" cx="59.76" cy="59.76" r="57.58"/>
+  <text x="16.68" y="59.82"  class="fil1 str2 fnt0">A</text>
+  <rect class="fil0 str3" x="11.18" y="46.68" width="97.89" height="17.48" rx="4.35" ry="4.35"/>
+  <g id="_1975563887168">
+   <line class="fil0 str3" x1="95.36" y1="42.08" x2="95.36" y2= "68.76" />
+   <line class="fil0 str3" x1="90.13" y1="42.08" x2="100.59" y2= "42.08" />
+   <line class="fil0 str3" x1="90.13" y1="68.76" x2="100.59" y2= "68.76" />
+  </g>
+ </g>
+</svg>

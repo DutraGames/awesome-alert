@@ -6,7 +6,8 @@ const awesomeAlert = ({
     buttonOK = 'OK!',
     closeStyle = 'default',
     buttonConfirm = 'Confirm!',
-    buttonCancel = 'Cancel.'
+    buttonCancel = 'Cancel.',
+    placeholderInput = 'write...'
 }) => {
     return new Promise(resolve => {
 
@@ -35,6 +36,7 @@ const awesomeAlert = ({
                 `
         }
 
+        // Make sure it's a opinion type alert.
         if (type === 'opinion') {
             templateButtons = `
                 <div class="buttons-question">
@@ -57,6 +59,17 @@ const awesomeAlert = ({
                         ${templateMessage}
                         ${templateButtons}
                     </div>`
+        
+        // Body model for Input exclusive use
+        if(type === 'input'){
+            templateBody = `
+            <div class="alert-body">
+                ${templateTitle}
+                <input type="text" value="" class="alert-input" placeholder="${placeholderInput}" >
+                ${templateButtons}
+            </div>
+            `
+        }
 
         let templateAlert = `
             <div class="alert-wallpaper">
@@ -124,6 +137,15 @@ const awesomeAlert = ({
 
             AlertButtonCancel.addEventListener('click', () => {
                 resolve('Cancel')
+                AlertWallpaper.remove()
+            })
+        }
+
+        // Alert actions the user passes a value
+        if(type === 'input'){
+            AlertButtonOK.addEventListener('click', () => {
+                const AlertInput = document.querySelector('.alert-input').value
+                resolve(AlertInput)
                 AlertWallpaper.remove()
             })
         }
