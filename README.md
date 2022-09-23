@@ -93,6 +93,7 @@ This can be very useful to know what your app/website user did when they saw you
 | ```img``` | ```string``` | ```""``` | Will be the image that will appear to the user. |
 | ```type``` | ```string``` | ```"success"``` | Will define what type of alert will be shown. |
 | ```closeStyle``` | ```string``` | ```"default"``` | Will be the style of the close alert button. |
+| ```placeholderInput``` | ```string``` | ```"write..."``` | Input placeholder, which is displayed in the alert input. |
 
 ## **Alerts Types**
 
@@ -105,6 +106,7 @@ Types that this library allows of alerts:
 * `question`
 * `opinion`
 * `dark`
+* `input`
 
 ## **Acknowledgements**
 
