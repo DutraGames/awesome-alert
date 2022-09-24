@@ -74,6 +74,23 @@ btnInput.addEventListener('click', () =>{
 })
 ```
 
+If you are interested in using a non-default alert, I recommend using `custom`. This will give you greater color freedom for your awesome alert! Example below:
+
+```js
+const btnCustom = document.querySelector('.show-Custom')
+btnCustom.addEventListener('click', () =>{
+    awesomeAlert({
+        type: 'custom',
+        title: 'You can start?',
+        message: 'The game is just catching the balls.',
+        bgColor: '#23a5c8',
+        img: 'imgs/custom.svg',
+        buttonOK: 'GO!',
+        closeStyle:  'circle'  
+    })
+})
+```
+
 ## **Promise**
 
 The function returns a promise, which returns the user's action.
