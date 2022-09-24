@@ -7,7 +7,8 @@ const awesomeAlert = ({
     closeStyle = 'default',
     buttonConfirm = 'Confirm!',
     buttonCancel = 'Cancel.',
-    placeholderInput = 'write...'
+    placeholderInput = 'write...',
+    bgColor = '#2dd284'
 }) => {
     return new Promise(resolve => {
 
@@ -47,11 +48,27 @@ const awesomeAlert = ({
                 `
         }
 
+        //Custom button colors.
+        if (type === 'custom') {
+            templateButtons = `<button class="alert-body-button bg-global">${buttonOK}</button>`
+        }
+
         let templateHeader = `
             <div class="alert-header ${type}-bg">
                 ${templateClose}
                 ${templateImage}
             </div>`
+
+        //Custom header colors.
+        if (type == 'custom') {
+            templateHeader = `
+                <div class="alert-header bg-global">
+                    ${templateClose}
+                    ${templateImage}
+                </div>`
+
+        }
+
 
         let templateBody = `
             <div class="alert-body">
@@ -59,9 +76,9 @@ const awesomeAlert = ({
                         ${templateMessage}
                         ${templateButtons}
                     </div>`
-        
+
         // Body model for Input exclusive use
-        if(type === 'input'){
+        if (type === 'input') {
             templateBody = `
             <div class="alert-body">
                 ${templateTitle}
@@ -82,6 +99,8 @@ const awesomeAlert = ({
 
         // Inject the alert into the "body".
         bodyEl.insertAdjacentHTML('beforeend', templateAlert)
+
+        //////////////////////////////////////////////////////////////////////////
 
         // Variables to use user actions.
         const AlertWallpaper = document.querySelector('.alert-wallpaper')
@@ -118,7 +137,7 @@ const awesomeAlert = ({
                 AlertWallpaper.remove()
             })
         }
-        
+
         // Actions that will be used from the opinion alert.
         if (type === 'opinion') {
             const AlertButtonOpinion = document.querySelectorAll('.opinion-bg')
@@ -142,7 +161,7 @@ const awesomeAlert = ({
         }
 
         // Alert actions the user passes a value
-        if(type === 'input'){
+        if (type === 'input') {
             AlertButtonOK.addEventListener('click', () => {
                 const AlertInput = document.querySelector('.alert-input').value
                 resolve(AlertInput)
@@ -156,6 +175,12 @@ const awesomeAlert = ({
             AlertWallpaper.remove()
         })
 
+        // Background color application
+        if (type === 'custom') {
+            const ColorBGs = document.querySelectorAll('.bg-global')
+            ColorBGs[0].style.backgroundColor = bgColor
+            ColorBGs[1].style.backgroundColor = bgColor
+        }
 
     })
 }
