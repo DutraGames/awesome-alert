@@ -110,6 +110,7 @@ This can be very useful to know what your app/website user did when they saw you
 | ```type``` | ```string``` | ```"success"``` | Will define what type of alert will be shown. |
 | ```closeStyle``` | ```string``` | ```"default"``` | Will be the style of the close alert button. |
 | ```placeholderInput``` | ```string``` | ```"write..."``` | Input placeholder, which is displayed in the alert input. |
+| ```bgColor``` | ```string``` | ```"#2dd284"``` | It is used to manipulate header and button background colors. Accepting `#HEX`, `rgb(red, green ,blue)` and `rgba(red, green ,blue, alpha)`. |
 
 ## **Alerts Types**
 
@@ -123,6 +124,7 @@ Types that this library allows of alerts:
 * `opinion`
 * `dark`
 * `input`
+* `custom`
 
 ## **Acknowledgements**
 
