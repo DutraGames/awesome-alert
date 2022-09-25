@@ -185,3 +185,25 @@ const awesomeAlert = ({
     })
 }
 
+const awesomeToast = ({
+    type = 'success',
+    title = 'Success',
+    message = 'Success Action!',
+    img = ''
+}) =>{
+    return new Promise(resolve = () =>{
+        const bodyEl = document.querySelector('body')
+
+        templateToast = `
+        <div class="toast-main ${type}-bg">
+            <img src=${img} class="toast-img" alt="">
+            <div class="toast-content">
+                <span class="toast-title">${title}</span>
+                <span class="toast-message">${message}</span>
+            </div>
+        </div>
+        `
+
+        bodyEl.insertAdjacentHTML('beforeend', templateToast)
+    })
+}
