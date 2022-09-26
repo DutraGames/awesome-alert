@@ -190,7 +190,8 @@ const awesomeToast = ({
     title = 'Success',
     message = 'Success Action!',
     img = '',
-    timer = 1000
+    timer = 1000,
+    bgColor = '#2dd284'
 }) => {
     return new Promise(resolve => {
         const bodyEl = document.querySelector('body')
@@ -208,11 +209,12 @@ const awesomeToast = ({
 
         templateToast = `
         <div class="toast-frame ${type}-bg" id="${toastId}-toast-frame">
-            <img src=${img} class="toast-img" alt="">
             <div class="toast-content">
                 <span class="toast-title">${title}</span>
                 <span class="toast-message">${message}</span>
             </div>
+            <img src=${img} class="toast-img">
+            <span class="toast-close" id="${toastId}-toast-close">X</span>
         </div>
         `
 
@@ -228,8 +230,14 @@ const awesomeToast = ({
 
         setTimeout(() => {
             ToastFrame.remove()
-            resolve('timeout')
+            resolve('endtime')
         }, timer)
+
+        const ToastClose = document.querySelector(`#${toastId}-toast-close`)
+        ToastClose.addEventListener('click', ()=>{
+            ToastFrame.remove()
+            resolve('close')
+        })
 
 
     })
