@@ -189,13 +189,25 @@ const awesomeToast = ({
     type = 'success',
     title = 'Success',
     message = 'Success Action!',
-    img = ''
-}) =>{
-    return new Promise(resolve = () =>{
+    img = '',
+    timer = 1000
+}) => {
+    return new Promise(resolve => {
         const bodyEl = document.querySelector('body')
 
+        let templateMain = document.querySelector('.toast-main')
+
+        if (!templateMain) {
+            bodyEl.insertAdjacentHTML(
+                'beforeend',`<div class="toast-main"></div>`
+            )
+            templateMain = document.querySelector('.toast-main')
+        }
+
+        const toastId = id()
+
         templateToast = `
-        <div class="toast-main ${type}-bg">
+        <div class="toast-frame ${type}-bg" id="${toastId}-toast-frame">
             <img src=${img} class="toast-img" alt="">
             <div class="toast-content">
                 <span class="toast-title">${title}</span>
@@ -204,6 +216,25 @@ const awesomeToast = ({
         </div>
         `
 
-        bodyEl.insertAdjacentHTML('beforeend', templateToast)
+        const toasts = document.querySelectorAll('.toast-frame')
+
+        if (toasts.length) {
+            toasts[0].insertAdjacentHTML('beforebegin', templateToast);
+        } else {
+            templateMain.innerHTML = templateToast;
+        }
+
+        const ToastFrame = document.querySelector(`#${toastId}-toast-frame`)
+
+        setTimeout(() => {
+            ToastFrame.remove()
+            resolve('timeout')
+        }, timer)
+
+
     })
+}
+
+const id = () => {
+    return '_' + Math.random().toString(36).substr(2, 9);
 }
