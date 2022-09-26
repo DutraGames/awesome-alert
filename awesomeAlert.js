@@ -185,3 +185,85 @@ const awesomeAlert = ({
     })
 }
 
+const awesomeToast = ({
+    type = 'success',
+    title = 'Success',
+    message = 'Success Action!',
+    img = '',
+    timer = 1000,
+    bgColor = '#2dd284'
+}) => {
+    return new Promise(resolve => {
+        const bodyEl = document.querySelector('body')
+
+        let templateMain = document.querySelector('.toast-main')
+
+        if (!templateMain) {
+            bodyEl.insertAdjacentHTML(
+                'beforeend',`<div class="toast-main"></div>`
+            )
+            templateMain = document.querySelector('.toast-main')
+        }
+
+        const toastId = id()
+
+        let templateToast = `
+        <div class="toast-frame ${type}-bg" id="${toastId}-toast-frame">
+            <div class="toast-content">
+                <span class="toast-title">${title}</span>
+                <span class="toast-message">${message}</span>
+            </div>
+            <img src=${img} class="toast-img">
+            <span class="toast-close" id="${toastId}-toast-close">X</span>
+        </div>
+        `
+
+        if(type === 'custom'){
+            templateToast = `
+            <div class="toast-frame bg-global" id="${toastId}-toast-frame">
+                <div class="toast-content">
+                    <span class="toast-title">${title}</span>
+                    <span class="toast-message">${message}</span>
+                </div>
+                <img src=${img} class="toast-img">
+                <span class="toast-close" id="${toastId}-toast-close">X</span>
+            </div>
+            `
+        }
+
+
+
+        const toasts = document.querySelectorAll('.toast-frame')
+
+        if (toasts.length) {
+            toasts[0].insertAdjacentHTML('beforebegin', templateToast);
+        } else {
+            templateMain.innerHTML = templateToast;
+        }
+
+        const ToastFrame = document.querySelector(`#${toastId}-toast-frame`)
+
+        setTimeout(() => {
+            ToastFrame.remove()
+            resolve('endtime')
+        }, timer)
+
+        const ToastClose = document.querySelector(`#${toastId}-toast-close`)
+        ToastClose.addEventListener('click', ()=>{
+            ToastFrame.remove()
+            resolve('close')
+        })
+
+        // Background color application
+        if (type === 'custom') {
+            const ColorBGs = document.querySelector('.bg-global')
+            ColorBGs.style.backgroundColor = bgColor
+        }
+
+
+    })
+}
+
+const id = () => {
+    return '_' + Math.random().toString(36).substr(2, 9);
+}
