@@ -214,7 +214,7 @@ const awesomeToast = ({
         const toastId = id()
 
         let templateToast = `
-        <div class="toast-frame ${type}-bg" id="${toastId}-toast-frame">
+        <div class="toast-frame ${type}-bg" style="animation: Toast-${position} .2s ease-in;" id="${toastId}-toast-frame">
             <div class="toast-content">
                 <span class="toast-title">${title}</span>
                 <span class="toast-message">${message}</span>

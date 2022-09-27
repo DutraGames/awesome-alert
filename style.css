@@ -213,9 +213,19 @@
 
 /* TOAST */
 
-@keyframes ToastIn {
+@keyframes Toast-right {
     0% {
         transform: translateX(500px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes Toast-left {
+    0% {
+        transform: translateX(-500px);
     }
 
     100% {
@@ -241,7 +251,6 @@
 }
 
 .toast-frame {
-    animation: ToastIn .2s ease-in;
     min-width: 100px;
     height: 70px;
     display: flex;
@@ -260,7 +269,7 @@
 }
 
 .toast-close {
-    color: #555;
+    color: #ccc;
     font-size: 10px;
     cursor: pointer;
     transition: all .3s;
