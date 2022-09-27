@@ -171,7 +171,7 @@ btnToast.addEventListener('click', () => {
     })
 ```
 
-## ***Props Toast**
+## **Props Toast**
 
 | Name | type | Default | Description |
 :--------- | :--------- | :--------- | :--------- |
