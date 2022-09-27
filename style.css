@@ -5,6 +5,41 @@
     box-sizing: border-box;
 }
 
+@keyframes AlertAnimate {
+    0%{
+        scale: 0;
+    }
+    25%{
+        scale: .5;
+    }
+    50%{
+        scale: .7;
+    }
+    75%{
+        scale: 1.2;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+@keyframes BodyAlert {
+    0%{
+        opacity: 0;
+        transform: translate(0px,100px);
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
 /* WALLPAPER ALERT */
 .alert-wallpaper {
     background-color: rgba(0, 0, 0, .5);
@@ -20,6 +55,7 @@
 
 /* THE FRAME MODAL ALERT */
 .alert-frame {
+    animation: AlertAnimate .4s cubic-bezier(.5, .2, .5, 1);
     border-radius: 10px;
     background-color: #fff;
     min-width: 250px;
@@ -89,6 +125,7 @@
 
 /* BODY ALERT */
 .alert-body {
+    animation: BodyAlert 1s linear;
     display: flex;
     flex-direction: column;
     align-items: center;
