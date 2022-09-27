@@ -152,7 +152,7 @@ Types that this library allows of alerts:
 Toast are small animations that will appear in the corner of the screen, called by the `awesomeToast()` function.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/69097449/192544588-9069f7c1-9e8e-4c34-ae8e-1eca7bb4fb94.gif" alt="AlertGif"/>
+  <img src="https://user-images.githubusercontent.com/69097449/192559156-2b59527a-6ce5-4405-8228-448cca4a9eff.gif" alt="AlertGif"/>
 </p>
 
 ## **Usage**
