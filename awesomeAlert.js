@@ -196,11 +196,16 @@ const awesomeToast = ({
     return new Promise(resolve => {
         const bodyEl = document.querySelector('body')
 
+
+        const id = () => {
+            return '_' + Math.random().toString(36).substr(2, 9);
+        }
+
         let templateMain = document.querySelector('.toast-main')
 
         if (!templateMain) {
             bodyEl.insertAdjacentHTML(
-                'beforeend',`<div class="toast-main"></div>`
+                'beforeend', `<div class="toast-main"></div>`
             )
             templateMain = document.querySelector('.toast-main')
         }
@@ -218,12 +223,12 @@ const awesomeToast = ({
         </div>
         `
 
-        if(type === 'custom'){
+        if (type === 'custom') {
             templateToast = `
             <div class="toast-frame bg-global" id="${toastId}-toast-frame">
                 <div class="toast-content">
-                    <span class="toast-title">${title}</span>
-                    <span class="toast-message">${message}</span>
+                <span class="toast-title">${title}</span>
+                <span class="toast-message">${message}</span>
                 </div>
                 <img src=${img} class="toast-img">
                 <span class="toast-close" id="${toastId}-toast-close">X</span>
@@ -249,7 +254,7 @@ const awesomeToast = ({
         }, timer)
 
         const ToastClose = document.querySelector(`#${toastId}-toast-close`)
-        ToastClose.addEventListener('click', ()=>{
+        ToastClose.addEventListener('click', () => {
             ToastFrame.remove()
             resolve('close')
         })
@@ -259,11 +264,5 @@ const awesomeToast = ({
             const ColorBGs = document.querySelector('.bg-global')
             ColorBGs.style.backgroundColor = bgColor
         }
-
-
     })
-}
-
-const id = () => {
-    return '_' + Math.random().toString(36).substr(2, 9);
 }
