@@ -197,11 +197,12 @@ const awesomeToast = ({
     return new Promise(resolve => {
         const bodyEl = document.querySelector('body')
 
-
+        // Function that passes its own id to toast
         const id = () => {
             return '_' + Math.random().toString(36).substr(2, 9);
         }
 
+        // Div mother of toasts.
         let templateMain = document.querySelector('.toast-main')
 
         if (!templateMain) {
@@ -210,9 +211,11 @@ const awesomeToast = ({
             )
             templateMain = document.querySelector('.toast-main')
         }
-
+        
+        // ID Toast
         const toastId = id()
 
+        // Model that Toast will follow.
         let templateToast = `
         <div class="toast-frame ${type}-bg" style="animation: Toast-${position} 1s ease-in;" id="${toastId}-toast-frame">
             <div class="toast-content">
@@ -224,6 +227,7 @@ const awesomeToast = ({
         </div>
         `
 
+        // Customizable gift template
         if (type === 'custom') {
             templateToast = `
             <div class="toast-frame bg-global" id="${toastId}-toast-frame">
@@ -238,7 +242,7 @@ const awesomeToast = ({
         }
 
 
-
+        // All toasts
         const toasts = document.querySelectorAll('.toast-frame')
 
         if (toasts.length) {
@@ -247,13 +251,16 @@ const awesomeToast = ({
             templateMain.innerHTML = templateToast;
         }
 
+        // Variable responsible for each gift.
         const ToastFrame = document.querySelector(`#${toastId}-toast-frame`)
 
+        // Toast timer.
         setTimeout(() => {
             ToastFrame.remove()
             resolve('endtime')
         }, timer)
 
+        // Close Toast.
         const ToastClose = document.querySelector(`#${toastId}-toast-close`)
         ToastClose.addEventListener('click', () => {
             ToastFrame.remove()
