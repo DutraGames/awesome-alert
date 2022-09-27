@@ -191,7 +191,8 @@ const awesomeToast = ({
     message = 'Success Action!',
     img = '',
     timer = 1000,
-    bgColor = '#2dd284'
+    bgColor = '#2dd284',
+    position = 'right'
 }) => {
     return new Promise(resolve => {
         const bodyEl = document.querySelector('body')
@@ -205,7 +206,7 @@ const awesomeToast = ({
 
         if (!templateMain) {
             bodyEl.insertAdjacentHTML(
-                'beforeend', `<div class="toast-main"></div>`
+                'beforeend', `<div class="toast-main toast-${position}"></div>`
             )
             templateMain = document.querySelector('.toast-main')
         }
