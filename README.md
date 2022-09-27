@@ -143,6 +143,10 @@ Types that this library allows of alerts:
 * `input`
 * `custom`
 
+# **Toast**
+
+Toast are small animations that will appear in the corner of the screen, called by the `awesomeToast()` function.
+
 ## **Acknowledgements**
 
 Thanks [@gustavosmanc](https://github.com/gustavosmanc) for having a library that inspired me to make this library.
