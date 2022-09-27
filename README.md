@@ -8,6 +8,8 @@ Feel free to contribute a pull request or suggestions. Because the community tha
 
 ![bandeja de alerta](https://user-images.githubusercontent.com/69097449/191129044-5c3b6b43-0b2b-4601-826c-bc1b2640de63.jpg)
 
+![Alert](https://user-images.githubusercontent.com/69097449/192541528-3826306e-c183-460a-b388-e2fe72f14a02.gif)
+
 ## **Installation Instructions**
 
 * Clone this repository in your project's lib folder or download the JS and CSS files.
