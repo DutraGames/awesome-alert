@@ -8,7 +8,9 @@ Feel free to contribute a pull request or suggestions. Because the community tha
 
 ![bandeja de alerta](https://user-images.githubusercontent.com/69097449/191129044-5c3b6b43-0b2b-4601-826c-bc1b2640de63.jpg)
 
-![Alert](https://user-images.githubusercontent.com/69097449/192541528-3826306e-c183-460a-b388-e2fe72f14a02.gif)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/69097449/192541528-3826306e-c183-460a-b388-e2fe72f14a02.gif" alt="AlertGif"/>
+</p>
 
 ## **Installation Instructions**
 
@@ -149,7 +151,9 @@ Types that this library allows of alerts:
 
 Toast are small animations that will appear in the corner of the screen, called by the `awesomeToast()` function.
 
-![toast](https://user-images.githubusercontent.com/69097449/192544588-9069f7c1-9e8e-4c34-ae8e-1eca7bb4fb94.gif)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/69097449/192544588-9069f7c1-9e8e-4c34-ae8e-1eca7bb4fb94.gif" alt="AlertGif"/>
+</p>
 
 ## **Acknowledgements**
 
