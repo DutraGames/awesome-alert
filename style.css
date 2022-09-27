@@ -218,6 +218,18 @@
         transform: translateX(500px);
     }
 
+    25% {
+        transform: translateX(375px);
+    }
+
+    50% {
+        transform: translateX(250px);
+    }
+
+    75% {
+        transform: translateX(125px);
+    }
+
     100% {
         transform: translateX(0px);
     }
@@ -228,9 +240,22 @@
         transform: translateX(-500px);
     }
 
+    25% {
+        transform: translateX(-375px);
+    }
+
+    50% {
+        transform: translateX(-250px);
+    }
+
+    75% {
+        transform: translateX(-125px);
+    }
+
     100% {
         transform: translateX(0px);
     }
+
 }
 
 .toast-main {

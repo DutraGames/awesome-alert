@@ -180,7 +180,7 @@ btnToast.addEventListener('click', () => {
 | ```position``` | ```string``` | ```'right'``` | It will be the position that the toast will appear. |
 | ```img``` | ```string``` | ```""``` | Will be the image that will appear to the user. |
 | ```type``` | ```string``` | ```"success"``` | Will define what type of alert will be shown. |
-| ```timer``` | ```number``` | ```1000``` | It will be the time the Toast will be on the screen in `ms`. |
+| ```timer``` | ```number``` | ```2000``` | It will be the time the Toast will be on the screen in `ms`. |
 | ```bgColor``` | ```string``` | ```"#2dd284"``` | It is used to manipulate header and button background colors. Accepting `#HEX`, `rgb(red, green ,blue)` and `rgba(red, green ,blue, alpha)`. |
 
 ## **Toast Types**
