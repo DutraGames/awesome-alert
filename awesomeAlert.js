@@ -274,3 +274,44 @@ const awesomeToast = ({
         }
     })
 }
+
+const awesomeHorizontal = ({
+    type = 'success',
+    img = '',
+    title = 'Success',
+    message = 'Success Action!',
+    buttonOK = 'OK!'
+}) => {
+    return new Promise(resolve => {
+
+        // Variable that takes the "body" element to inject the alert.
+        const bodyEl = document.querySelector('body')
+
+        let TemplateHorizontal = `
+        <div class="alert-wallpaper">
+            <div class="horizontal-frame">
+                <div class="horizontal-header ${type}-bg">
+                    <img src=${img} class="horizontal-img">
+                </div>
+                <div class="horizontal-body">
+                    <span class="horizontal-body-title">${title}</span>
+                    <span class="horizontal-body-message">${message}</span>
+                    <button class="horizontal-body-button ${type}-bg">Aqui</button>
+                </div>
+            </div>
+        </div>
+        `
+
+        // Inject the alert into the "body".
+        bodyEl.insertAdjacentHTML('beforeend', TemplateHorizontal)
+
+
+        // Background color application
+        if (type === 'custom') {
+            const ColorBGs = document.querySelectorAll('.bg-global')
+            ColorBGs[0].style.backgroundColor = bgColor
+            ColorBGs[1].style.backgroundColor = bgColor
+        }
+
+    })
+}
