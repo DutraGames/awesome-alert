@@ -6,36 +6,42 @@
 }
 
 @keyframes AlertAnimate {
-    0%{
+    0% {
         scale: 0;
     }
-    25%{
+
+    25% {
         scale: .5;
     }
-    50%{
+
+    50% {
         scale: .7;
     }
-    75%{
+
+    75% {
         scale: 1.2;
     }
-    100%{
+
+    100% {
         scale: 1;
     }
 }
 
 @keyframes BodyAlert {
-    0%{
+    0% {
         opacity: 0;
-        transform: translate(0px,100px);
+        transform: translate(0px, 100px);
     }
-    50%{
-        opacity: 0;
-    }
-    75%{
+
+    50% {
         opacity: 0;
     }
 
-    100%{
+    75% {
+        opacity: 0;
+    }
+
+    100% {
         opacity: 1;
     }
 }
@@ -139,8 +145,8 @@
     color: #000;
     font-size: 1.5rem;
     font-weight: bold;
-    overflow-wrap: break-word;  
-    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    word-wrap: break-word;
     word-break: break-word;
 }
 
@@ -149,8 +155,8 @@
     color: #aaa;
     font-size: 1.1rem;
     text-align: justify;
-    overflow-wrap: break-word;  
-    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    word-wrap: break-word;
     word-break: break-word;
 }
 
@@ -172,21 +178,21 @@
 
 /* BUTTONS QUESTION */
 
-.btn-cancel{
+.btn-cancel {
     background-color: #d85261;
 }
 
-.btn-cancel:hover{
+.btn-cancel:hover {
     opacity: .5;
 }
 
-.btn-confirm{
-  background-color: #2dd284;
-}  
+.btn-confirm {
+    background-color: #2dd284;
+}
 
-.btn-confirm:hover{
-  opacity: .5;
-}  
+.btn-confirm:hover {
+    opacity: .5;
+}
 
 .buttons-question {
     display: flex;
@@ -196,7 +202,7 @@
 
 /* INPUT ALERT */
 
-.alert-input{
+.alert-input {
     outline: none;
     border: 0;
     border-bottom: 1px solid #065535;
@@ -208,24 +214,33 @@
 /* TOAST */
 
 @keyframes ToastIn {
-    0%{
+    0% {
         transform: translateX(500px);
     }
-    100%{
+
+    100% {
         transform: translateX(0px);
     }
 }
 
-.toast-main{
+.toast-main {
     position: fixed;
-    top: 15px;
-    right: 15px;
     z-index: 99999;
     display: flex;
     flex-direction: column;
 }
 
-.toast-frame{
+.toast-right {
+    top: 15px;
+    right: 15px;
+}
+
+.toast-left {
+    top: 15px;
+    left: 15px;
+}
+
+.toast-frame {
     animation: ToastIn .2s ease-in;
     min-width: 100px;
     height: 70px;
@@ -236,15 +251,15 @@
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
 }
 
-.toast-frame + .toast-frame{
+.toast-frame+.toast-frame {
     margin-top: 10px;
 }
 
-.toast-img{
+.toast-img {
     object-fit: cover;
 }
 
-.toast-close{
+.toast-close {
     color: #555;
     font-size: 10px;
     cursor: pointer;
@@ -253,11 +268,11 @@
     height: 10px;
 }
 
-.toast-close:hover{
+.toast-close:hover {
     color: #fff;
 }
 
-.toast-content{
+.toast-content {
     padding-right: 10px;
     max-width: 85%;
     display: flex;
@@ -266,21 +281,21 @@
     justify-content: center;
 }
 
-.toast-title{
+.toast-title {
     color: #fff;
     font-size: 1.2rem;
     font-weight: bold;
-    overflow-wrap: break-word;  
-    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    word-wrap: break-word;
     word-break: break-word;
 }
 
-.toast-message{
+.toast-message {
     color: #eee;
     font-size: .9rem;
     text-align: justify;
-    overflow-wrap: break-word;  
-    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    word-wrap: break-word;
     word-break: break-word;
 }
 
@@ -306,6 +321,7 @@
 .question-bg {
     background-color: #779ecb;
 }
+
 .opinion-bg {
     background-color: #5c5d57;
 }
@@ -318,6 +334,6 @@
     background-color: #065535
 }
 
-.bg-global{
+.bg-global {
     background-color: #fff;
 }
