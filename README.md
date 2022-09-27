@@ -126,7 +126,7 @@ This can be very useful to know what your app/website user did when they saw you
 :--------- | :--------- | :--------- | :--------- |
 | ```title```  | ```string``` | ```"Success"``` | Will be the alert title. |
 | ```message``` | ```string``` | ```"Success action"``` | Will be the alert message. |
-| ```buttonOK``` | ```string``` | ```'OK!'``` | Is an optional parameter. |
+| ```buttonOK``` | ```string``` | ```'OK!'``` | It will be what will appear on the OK button. |
 | ```img``` | ```string``` | ```""``` | Will be the image that will appear to the user. |
 | ```type``` | ```string``` | ```"success"``` | Will define what type of alert will be shown. |
 | ```closeStyle``` | ```string``` | ```"default"``` | Will be the style of the close alert button. |
@@ -154,6 +154,43 @@ Toast are small animations that will appear in the corner of the screen, called 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/69097449/192544588-9069f7c1-9e8e-4c34-ae8e-1eca7bb4fb94.gif" alt="AlertGif"/>
 </p>
+
+## **Usage**
+
+```js
+const btnToast = document.querySelector('#btn-Toast')
+
+btnToast.addEventListener('click', () => {
+    awesomeToast({
+        type: 'success',
+        title: 'SUCCESS!',
+        message: 'Action Success!',
+        img: './imgs/success.svg',
+        timer: 3000,
+        position: 'right'
+    })
+```
+
+## ***Props Toast**
+
+| Name | type | Default | Description |
+:--------- | :--------- | :--------- | :--------- |
+| ```title```  | ```string``` | ```"Success"``` | Will be the alert title. |
+| ```message``` | ```string``` | ```"Success action"``` | Will be the alert message. |
+| ```position``` | ```string``` | ```'right'``` | It will be the position that the toast will appear. |
+| ```img``` | ```string``` | ```""``` | Will be the image that will appear to the user. |
+| ```type``` | ```string``` | ```"success"``` | Will define what type of alert will be shown. |
+| ```timer``` | ```number``` | ```1000``` | It will be the time the Toast will be on the screen in `ms`. |
+| ```bgColor``` | ```string``` | ```"#2dd284"``` | It is used to manipulate header and button background colors. Accepting `#HEX`, `rgb(red, green ,blue)` and `rgba(red, green ,blue, alpha)`. |
+
+## **Toast Types**
+
+* `success`
+* `error`
+* `warning`
+* `info`
+* `dark`
+* `custom`
 
 ## **Acknowledgements**
 
