@@ -61,7 +61,7 @@
 
 /* THE FRAME MODAL ALERT */
 .alert-frame {
-    animation: AlertAnimate .4s cubic-bezier(.5, .2, .5, 1);
+    animation: AlertAnimate .5s ease;
     border-radius: 10px;
     background-color: #fff;
     min-width: 250px;
@@ -335,6 +335,47 @@
 
 /* HORIZONTAL ALERT */
 
+@keyframes AlertHorizontalAnimate {
+    0% {
+        scale: 0;
+    }
+
+    25% {
+        scale: .5;
+    }
+
+    50% {
+        scale: .7;
+    }
+
+    75% {
+        scale: 1.2;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes BodyAlertHorizontal {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 100px);
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .horizontal-frame{
     display: flex;
     border-radius: 10px;
@@ -343,6 +384,7 @@
     max-width: 90vw;
     min-height: 250px;
     max-height: 80vh;
+    animation: AlertHorizontalAnimate .5s ease;
 }
 
 .horizontal-header{
@@ -371,6 +413,7 @@
     width: 100%;
     min-height: 100%;
     padding: 10px;
+    animation: BodyAlertHorizontal 1s linear;
 }
 
 .horizontal-body-title{
