@@ -194,6 +194,45 @@ btnToast.addEventListener('click', () => {
 * `dark`
 * `custom`
 
+# **Horizontal**
+
+The horizontal alert is wider. Great for making long messages. You can call it by the `awesomeHorizontal()` function.
+
+## **Usage**
+
+```js
+const btnHorizontal = document.querySelector('#btn-Horizontal')
+
+btnHorizontal.addEventListener('click', () => {
+    awesomeHorizontal({
+        type: 'success',
+        title: 'SUCCESS!',
+        message: 'Action Success!',
+        img: './imgs/success.svg',
+        buttonOK: 'Done!'
+    })
+```
+
+## **Props Horizontal**
+
+| Name | type | Default | Description |
+:--------- | :--------- | :--------- | :--------- |
+| ```title```  | ```string``` | ```"Success"``` | Will be the alert title. |
+| ```message``` | ```string``` | ```"Success action"``` | Will be the alert message. |
+| ```buttonOK``` | ```string``` | ```'OK!'``` | It will be what will appear on the OK button. |
+| ```img``` | ```string``` | ```""``` | Will be the image that will appear to the user. |
+| ```type``` | ```string``` | ```"success"``` | Will define what type of alert will be shown. |
+| ```bgColor``` | ```string``` | ```"#2dd284"``` | It is used to manipulate header and button background colors. Accepting `#HEX`, `rgb(red, green ,blue)` and `rgba(red, green ,blue, alpha)`. |
+
+## **Horizontal Types**
+
+* `success`
+* `error`
+* `warning`
+* `info`
+* `dark`
+* `custom`
+
 ## **Acknowledgements**
 
 Thanks [@gustavosmanc](https://github.com/gustavosmanc) for having a library that inspired me to make this library.
