@@ -198,6 +198,10 @@ btnToast.addEventListener('click', () => {
 
 The horizontal alert is wider. Great for making long messages. You can call it by the `awesomeHorizontal()` function.
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/69097449/193305848-ba368cdc-556d-48fd-8260-1b9905bef641.gif"/>
+</p>
+
 ## **Usage**
 
 ```js
