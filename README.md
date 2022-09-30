@@ -6,8 +6,6 @@ to provide beautiful alert box messages made with just HTML, CSS and JS.
 
 Feel free to contribute a pull request or suggestions. Because the community that uses it is the same that contributes!
 
-![bandeja de alerta](https://user-images.githubusercontent.com/69097449/191129044-5c3b6b43-0b2b-4601-826c-bc1b2640de63.jpg)
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/69097449/192541528-3826306e-c183-460a-b388-e2fe72f14a02.gif" alt="AlertGif"/>
 </p>
