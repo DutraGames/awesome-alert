@@ -211,7 +211,7 @@ const awesomeToast = ({
             )
             templateMain = document.querySelector('.toast-main')
         }
-        
+
         // ID Toast
         const toastId = id()
 
@@ -272,5 +272,72 @@ const awesomeToast = ({
             const ColorBGs = document.querySelector('.bg-global')
             ColorBGs.style.backgroundColor = bgColor
         }
+    })
+}
+
+const awesomeHorizontal = ({
+    type = 'success',
+    img = '',
+    title = 'Success',
+    message = 'Success Action!',
+    buttonOK = 'OK!',
+    bgColor = '#2dd284'
+}) => {
+    return new Promise(resolve => {
+
+        // Variable that takes the "body" element to inject the alert.
+        const bodyEl = document.querySelector('body')
+
+        let TemplateHorizontal = `
+        <div class="alert-wallpaper">
+            <div class="horizontal-frame">
+                <div class="horizontal-header ${type}-bg">
+                    <img src=${img} class="horizontal-img">
+                </div>
+                <div class="horizontal-body">
+                    <span class="horizontal-body-title">${title}</span>
+                    <span class="horizontal-body-message">${message}</span>
+                    <button class="horizontal-body-button ${type}-bg">${buttonOK}</button>
+                </div>
+            </div>
+        </div>
+        `
+
+        if (type === 'custom') {
+            TemplateHorizontal = `
+        <div class="alert-wallpaper">
+            <div class="horizontal-frame">
+                <div class="horizontal-header bg-global">
+                    <img src=${img} class="horizontal-img">
+                </div>
+                <div class="horizontal-body">
+                    <span class="horizontal-body-title">${title}</span>
+                    <span class="horizontal-body-message">${message}</span>
+                    <button class="horizontal-body-button bg-global">${buttonOK}</button>
+                </div>
+            </div>
+        </div>
+        `
+        }
+
+        // Inject the alert into the "body".
+        bodyEl.insertAdjacentHTML('beforeend', TemplateHorizontal)
+
+        const AlertWallpaper = document.querySelector('.alert-wallpaper')
+
+
+        const ButtomOKAlert = document.querySelector('.horizontal-body-button')
+        ButtomOKAlert.addEventListener('click', ()=>{
+            AlertWallpaper.remove()
+            resolve('ok')
+        })
+
+        // Background color application
+        if (type === 'custom') {
+            const ColorBGs = document.querySelectorAll('.bg-global')
+            ColorBGs[0].style.backgroundColor = bgColor
+            ColorBGs[1].style.backgroundColor = bgColor
+        }
+
     })
 }
