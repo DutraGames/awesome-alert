@@ -126,6 +126,8 @@ This can be very useful to know what your app/website user did when they saw you
 :--------- | :--------- | :--------- | :--------- |
 | ```title```  | ```string``` | ```"Success"``` | Will be the alert title. |
 | ```message``` | ```string``` | ```"Success action"``` | Will be the alert message. |
+| ```buttonConfirm``` | ```string``` | ```'Confirm!'``` | This will appear on the Confirm button. |
+| ```buttonCancel``` | ```string``` | ```'Cancel.'``` | This will appear on the Cancel button. |
 | ```buttonOK``` | ```string``` | ```'OK!'``` | It will be what will appear on the OK button. |
 | ```img``` | ```string``` | ```""``` | Will be the image that will appear to the user. |
 | ```type``` | ```string``` | ```"success"``` | Will define what type of alert will be shown. |
