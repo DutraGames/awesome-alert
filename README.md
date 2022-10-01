@@ -127,7 +127,7 @@ This can be very useful to know what your app/website user did when they saw you
 | ```buttonConfirm``` | ```string``` | ```'Confirm!'``` | This will appear on the Confirm button. |
 | ```buttonCancel``` | ```string``` | ```'Cancel.'``` | This will appear on the Cancel button. |
 | ```buttonOK``` | ```string``` | ```'OK!'``` | It will be what will appear on the OK button. |
-| ```img``` | ```string``` | ```""``` | Will be the image that will appear to the user. |
+| ```img``` | ```string``` | ```""``` | It will be the image that will appear to the user. Enter the path to access the image. |
 | ```type``` | ```string``` | ```"success"``` | Will define what type of alert will be shown. |
 | ```closeStyle``` | ```string``` | ```"default"``` | Will be the style of the close alert button. |
 | ```placeholderInput``` | ```string``` | ```"write..."``` | Input placeholder, which is displayed in the alert input. |
