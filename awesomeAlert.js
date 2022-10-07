@@ -8,7 +8,8 @@ const awesomeAlert = ({
     buttonConfirm = 'Confirm!',
     buttonCancel = 'Cancel.',
     placeholderInput = 'write...',
-    bgColor = '#2dd284'
+    bgColor = '#2dd284',
+    header = true
 }) => {
     return new Promise(resolve => {
 
@@ -97,6 +98,16 @@ const awesomeAlert = ({
             </div>
             `
 
+        if (!header) {
+            templateAlert = `
+            <div class="alert-wallpaper">
+                <div class="alert-frame">
+                    ${templateBody}
+                </div>
+            </div>
+            `
+        }
+
         // Inject the alert into the "body".
         bodyEl.insertAdjacentHTML('beforeend', templateAlert)
 
@@ -105,7 +116,10 @@ const awesomeAlert = ({
         // Variables to use user actions.
         const AlertWallpaper = document.querySelector('.alert-wallpaper')
 
-        const AlertClose = document.querySelector('.alert-close')
+        if (header) {
+            const AlertClose = document.querySelector('.alert-close')
+        }
+
         const AlertButtonOK = document.querySelector('.alert-body-button')
 
 
@@ -117,10 +131,12 @@ const awesomeAlert = ({
             }) */
 
         // Action that closes the alert on Close.
-        AlertClose.addEventListener('click', () => {
-            resolve('Close')
-            AlertWallpaper.remove()
-        })
+        if (header) {
+            AlertClose.addEventListener('click', () => {
+                resolve('Close')
+                AlertWallpaper.remove()
+            })
+        }
 
         // Actions that will be used from the question alert.
         if (type === 'question') {
@@ -327,7 +343,7 @@ const awesomeHorizontal = ({
 
 
         const ButtomOKAlert = document.querySelector('.horizontal-body-button')
-        ButtomOKAlert.addEventListener('click', ()=>{
+        ButtomOKAlert.addEventListener('click', () => {
             AlertWallpaper.remove()
             resolve('ok')
         })
