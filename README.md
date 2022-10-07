@@ -132,6 +132,7 @@ This can be very useful to know what your app/website user did when they saw you
 | ```closeStyle``` | ```string``` | ```"default"``` | Will be the style of the close alert button. |
 | ```placeholderInput``` | ```string``` | ```"write..."``` | Input placeholder, which is displayed in the alert input. |
 | ```bgColor``` | ```string``` | ```"#2dd284"``` | It is used to manipulate header and button background colors. Accepting `#HEX`, `rgb(red, green ,blue)` and `rgba(red, green ,blue, alpha)`. |
+| ```header``` | ```bolean``` | ```true``` | It is used to say if it will have a header. |
 
 ## **Alerts Types**
 
