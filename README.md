@@ -226,6 +226,7 @@ btnHorizontal.addEventListener('click', () => {
 | ```img``` | ```string``` | ```""``` | Will be the image that will appear to the user. |
 | ```type``` | ```string``` | ```"success"``` | Will define what type of alert will be shown. |
 | ```bgColor``` | ```string``` | ```"#2dd284"``` | It is used to manipulate header and button background colors. Accepting `#HEX`, `rgb(red, green ,blue)` and `rgba(red, green ,blue, alpha)`. |
+| ```header``` | ```bolean``` | ```true``` | It is used to say if it will have a header. |
 
 ## **Horizontal Types**
 
