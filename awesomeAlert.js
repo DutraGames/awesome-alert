@@ -297,19 +297,23 @@ const awesomeHorizontal = ({
     title = 'Success',
     message = 'Success Action!',
     buttonOK = 'OK!',
-    bgColor = '#2dd284'
+    bgColor = '#2dd284',
+    header = true
 }) => {
     return new Promise(resolve => {
 
         // Variable that takes the "body" element to inject the alert.
         const bodyEl = document.querySelector('body')
 
+        let templateHeader = `
+        <div class="horizontal-header ${type}-bg">
+            <img src=${img} class="horizontal-img">
+        </div>`
+
         let TemplateHorizontal = `
         <div class="alert-wallpaper">
             <div class="horizontal-frame">
-                <div class="horizontal-header ${type}-bg">
-                    <img src=${img} class="horizontal-img">
-                </div>
+                ${templateHeader}
                 <div class="horizontal-body">
                     <span class="horizontal-body-title">${title}</span>
                     <span class="horizontal-body-message">${message}</span>
@@ -334,6 +338,20 @@ const awesomeHorizontal = ({
             </div>
         </div>
         `
+        }
+
+        if(!header){
+            TemplateHorizontal = `
+            <div class="alert-wallpaper">
+                <div class="horizontal-frame">
+                    <div class="horizontal-body">
+                        <span class="horizontal-body-title">${title}</span>
+                        <span class="horizontal-body-message">${message}</span>
+                        <button class="horizontal-body-button ${type}-bg">${buttonOK}</button>
+                    </div>
+                </div>
+            </div>
+            `
         }
 
         // Inject the alert into the "body".
