@@ -133,6 +133,7 @@ This can be very useful to know what your app/website user did when they saw you
 | ```placeholderInput``` | ```string``` | ```"write..."``` | Input placeholder, which is displayed in the alert input. |
 | ```bgColor``` | ```string``` | ```"#2dd284"``` | It is used to manipulate header and button background colors. Accepting `#HEX`, `rgb(red, green ,blue)` and `rgba(red, green ,blue, alpha)`. |
 | ```header``` | ```bolean``` | ```true``` | It is used to say if it will have a header. |
+| ```playSound``` | ```string``` | ```null``` | Sound that plays when calling alerts. |
 
 ## **Alerts Types**
 
@@ -183,6 +184,7 @@ btnToast.addEventListener('click', () => {
 | ```type``` | ```string``` | ```"success"``` | Will define what type of alert will be shown. |
 | ```timer``` | ```number``` | ```2000``` | It will be the time the Toast will be on the screen in `ms`. |
 | ```bgColor``` | ```string``` | ```"#2dd284"``` | It is used to manipulate header and button background colors. Accepting `#HEX`, `rgb(red, green ,blue)` and `rgba(red, green ,blue, alpha)`. |
+| ```playSound``` | ```string``` | ```null``` | Sound that plays when calling alerts. |
 
 ## **Toast Types**
 
@@ -227,6 +229,7 @@ btnHorizontal.addEventListener('click', () => {
 | ```type``` | ```string``` | ```"success"``` | Will define what type of alert will be shown. |
 | ```bgColor``` | ```string``` | ```"#2dd284"``` | It is used to manipulate header and button background colors. Accepting `#HEX`, `rgb(red, green ,blue)` and `rgba(red, green ,blue, alpha)`. |
 | ```header``` | ```bolean``` | ```true``` | It is used to say if it will have a header. |
+| ```playSound``` | ```string``` | ```null``` | Sound that plays when calling alerts. |
 
 ## **Horizontal Types**
 
