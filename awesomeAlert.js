@@ -9,7 +9,8 @@ const awesomeAlert = ({
     buttonCancel = 'Cancel.',
     placeholderInput = 'write...',
     bgColor = '#2dd284',
-    header = true
+    header = true,
+    playSound = null
 }) => {
     return new Promise(resolve => {
 
@@ -89,6 +90,11 @@ const awesomeAlert = ({
             `
         }
 
+        if(playSound !== null){
+            let sound = new Audio(playSound)
+            sound.play()
+        }
+
         let templateAlert = `
             <div class="alert-wallpaper">
                 <div class="alert-frame">
@@ -116,10 +122,6 @@ const awesomeAlert = ({
         // Variables to use user actions.
         const AlertWallpaper = document.querySelector('.alert-wallpaper')
 
-        if (header) {
-            const AlertClose = document.querySelector('.alert-close')
-        }
-
         const AlertButtonOK = document.querySelector('.alert-body-button')
 
 
@@ -132,6 +134,7 @@ const awesomeAlert = ({
 
         // Action that closes the alert on Close.
         if (header) {
+            const AlertClose = document.querySelector('.alert-close')
             AlertClose.addEventListener('click', () => {
                 resolve('Close')
                 AlertWallpaper.remove()
@@ -208,7 +211,8 @@ const awesomeToast = ({
     img = '',
     timer = 2000,
     bgColor = '#2dd284',
-    position = 'right'
+    position = 'right',
+    playSound = null
 }) => {
     return new Promise(resolve => {
         const bodyEl = document.querySelector('body')
@@ -230,6 +234,11 @@ const awesomeToast = ({
 
         // ID Toast
         const toastId = id()
+
+        if(playSound !== null){
+            let sound = new Audio(playSound)
+            sound.play()
+        }
 
         // Model that Toast will follow.
         let templateToast = `
@@ -298,7 +307,8 @@ const awesomeHorizontal = ({
     message = 'Success Action!',
     buttonOK = 'OK!',
     bgColor = '#2dd284',
-    header = true
+    header = true,
+    playSound = null
 }) => {
     return new Promise(resolve => {
 
@@ -338,6 +348,11 @@ const awesomeHorizontal = ({
             </div>
         </div>
         `
+        }
+
+        if(playSound !== null){
+            let sound = new Audio(playSound)
+            sound.play()
         }
 
         if(!header){
