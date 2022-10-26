@@ -322,7 +322,7 @@ const awesomeHorizontal = ({
 
         let templateHeader = `
         <div class="horizontal-header ${type}-bg">
-            <img src=${img} class="horizontal-img">
+            <img src=${img} class="horizontal-img" alt="">
         </div>`
 
         let TemplateHorizontal = `
